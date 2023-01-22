@@ -13,6 +13,5 @@ macro(tutrc_ament_init)
     add_compile_options(-Wall -Wextra -Wpedantic)
   endif()
 
-  find_package(ament_cmake_auto_mod REQUIRED)
   ament_auto_find_build_dependencies()
 endmacro()
