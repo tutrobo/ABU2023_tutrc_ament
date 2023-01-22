@@ -3,6 +3,8 @@ project(tutrc_ament_node NONE)
 
 find_package(ament_cmake REQUIRED)
 
+ament_export_dependencies(rclcpp_components)
+
 ament_package(
   CONFIG_EXTRAS "tutrc_ament_node-extras.cmake"
 )

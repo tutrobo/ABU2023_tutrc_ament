@@ -26,7 +26,7 @@ macro(tutrc_ament_create_node target)
     )
   endif()
 
-  ament_auto_add_library("${target}" SHARED
+  tutrc_ament_add_library("${target}"
     "${ARG_NODE_NAME}_component_generated.cpp"
     ${cxx_sources}
   )
