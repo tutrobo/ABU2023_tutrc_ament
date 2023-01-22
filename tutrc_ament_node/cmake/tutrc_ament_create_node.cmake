@@ -30,6 +30,7 @@ macro(tutrc_ament_create_node target)
     "${ARG_NODE_NAME}_component_generated.cpp"
     ${cxx_sources}
   )
+  ament_target_dependencies("${target}" rclcpp_components)
 
   rclcpp_components_register_node("${target}"
     PLUGIN      "${ARG_NODE_PLUGIN}"
