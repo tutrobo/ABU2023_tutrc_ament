@@ -12,23 +12,9 @@ macro(tutrc_ament_create_node target)
     @ONLY
   )
 
-  if(ARG_UNPARSED_ARGUMENTS)
-    set(cxx_sources ${ARG_UNPARSED_ARGUMENTS})
-  else()
-    file(
-      GLOB_RECURSE
-      cxx_sources
-      RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}"
-      "src/*.c"
-      "src/*.cc"
-      "src/*.cpp"
-      "src/*.cxx"
-    )
-  endif()
-
   tutrc_ament_add_library("${target}"
+    ${ARG_UNPARSED_ARGUMENTS}
     "${ARG_NODE_NAME}_component_generated.cpp"
-    ${cxx_sources}
   )
   ament_target_dependencies("${target}" rclcpp_components)
 
