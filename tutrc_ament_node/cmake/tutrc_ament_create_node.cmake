@@ -23,12 +23,12 @@ macro(tutrc_ament_create_node target)
   )
 
   if(ARG_UNPARSED_ARGUMENTS)
-    tutrc_ament_add_library("${target}"
+    tutrc_ament_add_library("${target}" SHARED
       "${ARG_NODE_NAME}_component_generated.cpp"
       ${ARG_UNPARSED_ARGUMENTS}
     )
   else()
-    tutrc_ament_add_library("${target}"
+    tutrc_ament_add_library("${target}" SHARED
       "${ARG_NODE_NAME}_component_generated.cpp"
       ${cxx_sources}
     )
