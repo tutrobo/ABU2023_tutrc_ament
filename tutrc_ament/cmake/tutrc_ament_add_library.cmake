@@ -1,6 +1,6 @@
 macro(tutrc_ament_add_library target)
   cmake_parse_arguments(ARG
-    "INTERFACE"
+    ""
     ""
     ""
     ${ARGN}
