@@ -16,5 +16,8 @@
 
   <export>
     <build_type>ament_cmake</build_type>
+    <deprecated>
+      tutrc_ament_node pkg is deprecated. use tutrc_ament_register_node in tutrc_ament pkg.
+    </deprecated>
   </export>
 </package>
